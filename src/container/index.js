@@ -4,13 +4,12 @@ import path from 'path';
 
 import routes from '../routes';
 
-// Container.register('Container', { resolve: c => c });
-
 const asFunction = Container.resolve('asFunction');
 const asValue = Container.resolve('asValue');
 Container.register('appRoot', asValue(path.join(__dirname, '../../')));
 
 const app = Container.resolve('Application');
+app.loadModel = () => {};
 app.loadControllers();
 
 Container.register('routes', asFunction(routes).singleton());

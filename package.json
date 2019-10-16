@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon src/index.js",
-    "debug": "nodemon src/index.js --inspect",
+    "debug": "nodemon src/index.js",
     "build": "sucrase ./src -d ./dist --transforms imports"
   },
   "devDependencies": {
