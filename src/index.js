@@ -1,5 +1,5 @@
-import './setup';
+import container from './container';
 
-const server = use('Server');
+const server = container.resolve('Server');
 
 export default server.boot();
